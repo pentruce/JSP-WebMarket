@@ -25,22 +25,22 @@
 	
 
 	<%!
-	//¼±¾ğ-º¯¼ö³ª ¸Ş¼Òµå
-	String greeting = "À¥ ¼îÇÎ¸ô¿¡ ¿À½Å °ÍÀ» È¯¿µÇÕ´Ï´Ù.";
+	//ì„ ì–¸-ë³€ìˆ˜ë‚˜ ë©”ì†Œë“œ
+	String greeting = "ì›¹ ì‡¼í•‘ëª°ì— ì˜¤ì‹  ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤.";
 	String tagline = "Welcome to Web Market!"; %>
 
 
 	<%
-	//±×³É ÀÚ¹Ù ÄÚµå ÀÛ¼º
-	// out.println("<h1> Hello World!!! </h1>"); //ÀÚ¹ÙÄÚµå¾È¿¡ jsp³ÖÀ» ¼ö µµ ÀÖÀ½.
+	//ê·¸ëƒ¥ ìë°” ì½”ë“œ ì‘ì„±
+	// out.println("<h1> Hello World!!! </h1>"); //ìë°”ì½”ë“œì•ˆì— jspë„£ì„ ìˆ˜ ë„ ìˆìŒ.
 	%>
 
-	<!--p5:ÀüÃ¼ ÆĞµù - 5: ¸¹ÀÌ ÁØ°ÅÀÓ. 3ÀÌ Áß°£ÀÓ. -->
+	<!--p5:ì „ì²´ íŒ¨ë”© - 5: ë§ì´ ì¤€ê±°ì„. 3ì´ ì¤‘ê°„ì„. -->
 	<div class=" p-5 bg-secondary text-white ">
 		<div class="container">
-			<!-- °¡¿îµ¥ Á¤·Ä -->
+			<!-- ê°€ìš´ë° ì •ë ¬ -->
 			<h1 class="display-3">
-				<!-- ±ÛÀÚÅ©±â-3:Å« ±ÛÀÚÁß¿¡ º¸Åë Å©±â -->
+				<!-- ê¸€ìí¬ê¸°-3:í° ê¸€ìì¤‘ì— ë³´í†µ í¬ê¸° -->
 				<%= greeting %>
 			</h1>
 		</div>
@@ -50,12 +50,12 @@
 			<h3><%= tagline %></h3>
 			<% 
 			
-			response.setIntHeader("Refresh", 10); //1ÃÊ¿¡ ÇÑ¹ø¾¿ »õ·Î°íÄ§.
+			response.setIntHeader("Refresh", 10); //10ì´ˆì— í•œë²ˆì”© ìƒˆë¡œê³ ì¹¨.
 			
 			Date today = new Date();
 			SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
 			
-			out.println("ÇöÀç Á¢¼Ó ½Ã°£: " + format.format(today));
+			out.println("í˜„ì¬ ì ‘ì† ì‹œê°„: " + format.format(today));
 			%>
 		</div>
 	<jsp:include page="footer.jsp" />
