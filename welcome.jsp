@@ -2,7 +2,7 @@
 	pageEncoding="EUC-KR"%>
 <%@ page import ="java.util.Date" %>
 <%@ page import ="java.text.SimpleDateFormat" %>
-	
+
 <!DOCTYPE html>
 <html>
 <meta charset="EUC-KR">
@@ -13,7 +13,7 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <head>
 
-<title>Insert title here</title>
+<title>kopo15's mall</title>
 </head>
 <body>
 	<!--  
@@ -21,13 +21,8 @@
 		<h1>HOME</h1>
 	</div>	
    -->
-	<nav class="navbar navbar-expand navbar-dark bg-dark">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="./welcome.jsp">Home</a>
-			</div>
-		</div>
-	</nav>
+	<jsp:include page="menu.jsp" />
+	
 
 	<%!
 	//선언-변수나 메소드
@@ -54,16 +49,16 @@
 		<div class="text-center">
 			<h3><%= tagline %></h3>
 			<% 
+			
+			response.setIntHeader("Refresh", 10); //1초에 한번씩 새로고침.
+			
 			Date today = new Date();
 			SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
 			
 			out.println("현재 접속 시간: " + format.format(today));
 			%>
 		</div>
-	</div>
-	<footer class="container">
-		<p>&copy; WebMarket</p>
-	</footer>
+	<jsp:include page="footer.jsp" />
 
 </body>
 </html>
