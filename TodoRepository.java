@@ -30,5 +30,4 @@ public class TodoRepository {
 		todo.setId(currentId++);
 		todos.add(todo);
 	}
-
 }
